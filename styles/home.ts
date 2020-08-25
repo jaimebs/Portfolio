@@ -5,41 +5,28 @@ import { MdEmail } from "react-icons/md";
 export const Container = styled.div`
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+`;
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+export const Main = styled.div`
+  max-width: 396px;
+  height: 502px;
+  display: flex;
+  flex-direction: column;
+  padding: 66px 44px 44px;
+  background: #fff;
+  border-radius: 6px;
+  opacity: 85%;
 
   @media (max-width: 320px) {
     padding: 10px;
   }
 `;
 
-export const Main = styled.div`
-  max-width: 396px;
-  height: 502px;
-  text-align: center;
-  padding: 66px 44px 44px;
-  background: #fff;
-  border-radius: 6px;
-  opacity: 85%;
-`;
-
 export const Head = styled.header`
+  text-align: center;
+
   img {
     max-width: 150px;
     border-radius: 50%;
@@ -59,15 +46,17 @@ export const Head = styled.header`
 `;
 
 export const Icons = styled.div`
-  margin-top: 60px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
 `;
 
 export const Linkedin = styled(FaLinkedin)`
   font-size: 50px;
   fill: #313f47;
+  transition: 0.5s;
 
   &:hover {
     fill: #0073b1;
@@ -77,6 +66,7 @@ export const Linkedin = styled(FaLinkedin)`
 export const Github = styled(FaGithub)`
   font-size: 50px;
   fill: #313f47;
+  transition: 0.5s;
 
   &:hover {
     fill: black;
@@ -86,8 +76,28 @@ export const Github = styled(FaGithub)`
 export const Email = styled(MdEmail)`
   font-size: 60px;
   fill: #313f47;
+  transition: 0.5s;
 
   &:hover {
     fill: red;
+  }
+`;
+
+export const Footer = styled.footer`
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: 1px solid #313f47;
+  padding: 10px 0;
+  opacity: 80%;
+
+  a {
+    color: #313f47;
+
+    :hover {
+      cursor: pointer;
+      color: black;
+      transition: 0.5s;
+    }
   }
 `;

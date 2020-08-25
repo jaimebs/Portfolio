@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Container,
   Main,
@@ -6,6 +7,7 @@ import {
   Linkedin,
   Github,
   Email,
+  Footer,
 } from "../styles/home";
 
 export default function Home() {
@@ -44,6 +46,11 @@ export default function Home() {
             <Email />
           </a>
         </Icons>
+        <Footer>
+          <Link href="/sobre">
+            <a>Sobre</a>
+          </Link>
+        </Footer>
       </Main>
     </Container>
   );
